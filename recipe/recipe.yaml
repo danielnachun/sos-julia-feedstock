@@ -27,7 +27,7 @@ requirements:
     - sos-notebook >=0.22.7
     - feather-format
     - julia
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
 
 tests:
   - python:
@@ -38,6 +38,8 @@ tests:
       run:
         - pip
         - python =${{ python_min }}
+    script:
+      - pip check
 
 about:
   license: BSD-3-Clause
